@@ -25,13 +25,13 @@ describe("Test Message class", function () {
       phone: "+14155552222",
     });
     let m1 = await Message.create({
-      from_username: "test1",
-      to_username: "test2",
+      from_username: u1.username,
+      to_username: u2.username,
       body: "u1-to-u2"
     });
     let m2 = await Message.create({
-      from_username: "test2",
-      to_username: "test1",
+      from_username: u2.username,
+      to_username: u1.username,
       body: "u2-to-u1"
     });
   });
